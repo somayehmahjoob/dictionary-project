@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 // import SearchResultComponent from "./SearchResultComponent";
 
 import "../assets/css/HeaderComponent.css";
@@ -6,9 +7,21 @@ import "../assets/css/HeaderComponent.css";
 export default function HeaderComponent() {
   const [keyword, setKeyword] = useState("hi");
 
+  function handelResponse(response){
+    // let status= response.status;
+    console.log(response.data[0]); 
+    // if (status === 200) {
+    //   console.log(response.data[0]);      
+    // } else {
+    //   console.log(`Not Found!`);
+    // }
+    
+  }
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(`${keyword} Header`);
+    
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+    axios.get(apiUrl).then(handelResponse);
     // <SearchResultComponent keywordSearch={keyword} />;
   }
 
