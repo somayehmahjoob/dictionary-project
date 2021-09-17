@@ -6,3 +6,17 @@
   margin: 20px auto;
   width: 60vw;
 }
+.word-phonetic {
+  display: inline-block;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 6px;
+}
+.meaning-definition {
+  font-size: 18px;
+  font-weight: 500;
+}
+.meaning-example {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(58, 58, 58);
+}

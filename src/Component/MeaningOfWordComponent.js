@@ -7,8 +7,8 @@ export default function MeaningOfWordComponent(props){
       {props.meaning.definitions.map((definition,index) =>{
         return (
           <div key={index}>
-            <p>{definition.definition}</p>
-            <p>{definition.example}</p>
+            <p className="meaning-definition">{definition.definition}</p>
+            <p className="meaning-example">{definition.example}</p>
           </div>
         );
       })}
