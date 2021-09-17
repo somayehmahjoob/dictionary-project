@@ -6,15 +6,14 @@ import "../assets/css/SearchComponent.css";
 
 export default function SearchComponent() {
   const [keyword, setKeyword] = useState(null);
+  const [result, setResult] = useState(null);
 
-  function handelResponse(response){
-    console.log(response.data[0].word);
-    
-    // if (status === 200) {
-    //   console.log(response.data[0]);      
-    // } else {
-    //   console.log(`Not Found!`);
-    // }
+  function handelResponse(response){       
+    if (response.status === 200) {
+      setResult(response.data[0]);
+    } else {
+      console.log(`Not Found!`);
+    }
     
   }
   function handleSubmit(event) {
@@ -41,7 +40,7 @@ export default function SearchComponent() {
         </form>
       </div>
 
-      <SearchResultComponent searchResult ={keyword}/>
+      <SearchResultComponent searchResult ={result}/>
     </div>
   );
 }
