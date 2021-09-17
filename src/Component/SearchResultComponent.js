@@ -4,8 +4,7 @@ export default function SearchResultComponent(props){
   
   return (
     <div className="SearchResultComponent">
-      <div className="Search-Result-main">Main body
-      </div>
+      <div className="Search-Result-main">{props.searchResult}</div>
     </div>
   );
 }

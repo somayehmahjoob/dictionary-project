@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import axios from 'axios';
-// import SearchResultComponent from "./SearchResultComponent";
+import SearchResultComponent from "./SearchResultComponent";
 
-import "../assets/css/HeaderComponent.css";
+import "../assets/css/SearchComponent.css";
 
-export default function HeaderComponent() {
-  const [keyword, setKeyword] = useState("hi");
+export default function SearchComponent() {
+  const [keyword, setKeyword] = useState(null);
 
   function handelResponse(response){
-    // let status= response.status;
-    console.log(response.data[0]); 
+    console.log(response.data[0].word);
+    
     // if (status === 200) {
     //   console.log(response.data[0]);      
     // } else {
@@ -18,11 +18,9 @@ export default function HeaderComponent() {
     
   }
   function handleSubmit(event) {
-    event.preventDefault();
-    
+    event.preventDefault();    
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-    axios.get(apiUrl).then(handelResponse);
-    // <SearchResultComponent keywordSearch={keyword} />;
+    axios.get(apiUrl).then(handelResponse);    
   }
 
   function handleChangeKeyword(event) {
@@ -30,7 +28,7 @@ export default function HeaderComponent() {
   }
 
   return (
-    <div className="HeaderComponent">
+    <div className="SearchComponent">
       <div className="header">
         <div className="Header-Title">Dictionary</div>
         <form onSubmit={handleSubmit}>
@@ -42,6 +40,8 @@ export default function HeaderComponent() {
           <input type="submit" className="Header-btn" value="Search" />
         </form>
       </div>
+
+      <SearchResultComponent searchResult ={keyword}/>
     </div>
   );
 }
