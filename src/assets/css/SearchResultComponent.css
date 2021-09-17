@@ -20,3 +20,21 @@
   font-weight: 500;
   color: rgb(58, 58, 58);
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  width: 100vw;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--seconde-color);
+  color: #fff;
+}
+.footer a {
+  color: var(--header-color) !important;
+  text-decoration: none;
+}
+.footer a:visited {
+  text-decoration: none;
+  color: #fdc2c8 !important;
+}
