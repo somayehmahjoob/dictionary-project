@@ -11,6 +11,9 @@
   border-bottom: 3px solid #ccc;
   padding-bottom: 6px;
 }
+.audio {
+  background-color: #fff;
+}
 .meaning-definition {
   font-size: 18px;
   font-weight: 500;

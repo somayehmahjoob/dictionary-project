@@ -1,5 +1,7 @@
 import React from "react";
 import MeaningOfWordComponent from "./MeaningOfWordComponent";
+import PhoneticComponent from "./PhoneticComponent";
+
 
 export default function SearchResultComponent(props){
   console.log(props.searchResult);
@@ -8,9 +10,13 @@ export default function SearchResultComponent(props){
       <div className="SearchResultComponent">
         <div className="Search-Result-main">
           <h2>{props.searchResult.word}</h2>
-          <p className="word-phonetic">
-            <em>{props.searchResult.phonetic}</em>
-          </p>
+          {props.searchResult.phonetics.map((phonetic , index) => {
+            return (
+              <div key={index}>
+                <PhoneticComponent phonetic={phonetic} />
+              </div>
+            );
+          })} 
 
           {props.searchResult.meanings.map((meaning, index) => {
             return (
@@ -20,7 +26,6 @@ export default function SearchResultComponent(props){
             );
           })}
         </div>
-        
       </div>
     );
   }
