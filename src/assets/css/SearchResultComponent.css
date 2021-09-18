@@ -20,8 +20,14 @@
   font-weight: 500;
   color: rgb(58, 58, 58);
 }
+.synonym {
+  display: inline-block;
+  margin: 10px;
+  border-bottom: 1px solid;
+  line-height: 2;
+}
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   font-size: 12px;
   width: 100vw;

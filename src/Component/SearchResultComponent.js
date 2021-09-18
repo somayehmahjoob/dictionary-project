@@ -20,6 +20,7 @@ export default function SearchResultComponent(props){
             );
           })}
         </div>
+        
       </div>
     );
   }
