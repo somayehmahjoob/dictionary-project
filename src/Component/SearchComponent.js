@@ -9,13 +9,9 @@ export default function SearchComponent() {
   const [result, setResult] = useState(null);
 
   function handelResponse(response){       
-    if (response.status === 200) {
-      setResult(response.data[0]);
-    } else {
-      console.log(`Not Found!`);
-    }
-    
+    setResult(response.data[0]);    
   }
+
   function handleSubmit(event) {
     event.preventDefault();    
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
@@ -36,11 +32,12 @@ export default function SearchComponent() {
             placeholder="Search keyword.."
             onChange={handleChangeKeyword}
           />
+
           <input type="submit" className="Header-btn" value="Search" />
         </form>
       </div>
 
-      <SearchResultComponent searchResult ={result}/>
+      <SearchResultComponent searchResult={result} />
     </div>
   );
 }

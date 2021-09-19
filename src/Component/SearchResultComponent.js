@@ -4,7 +4,7 @@ import PhoneticComponent from "./PhoneticComponent";
 
 
 export default function SearchResultComponent(props){
-  console.log(props.searchResult);
+
   if (props.searchResult){
     return (
       <div className="SearchResultComponent">
