@@ -17,8 +17,22 @@
   display: inline-block;
   padding-bottom: 6px;
 }
-.audio {
+.word-phonetic-btn {
+  width: 20px;
+  height: 20px;
+}
+.word-phonetic a {
+  text-decoration: none;
+  color: var(--header-color);
   background-color: #fff;
+  padding: 5px 10px ;
+  margin-right: 5px;
+  border-radius: 12px;
+  border: 1px solid var(--header-color);
+}
+.word-phonetic a:hover {
+  background-color: var(--header-color);
+  color: #fff;
 }
 .meaning-definition {
   font-size: 18px;
