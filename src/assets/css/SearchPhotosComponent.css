@@ -1,0 +1,15 @@
+.SearchPhotosComponent {
+  text-align: center;
+}
+.box-img {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box>div img {
+  max-width: 280px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}

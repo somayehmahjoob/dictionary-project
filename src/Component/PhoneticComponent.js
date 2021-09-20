@@ -8,7 +8,7 @@ export default function PhoneticComponent(props){
       <div className="word-phonetic">
         <span>/{props.phonetic.text}/</span>
         <div className="audio">
-          <ReactAudioPlayer src={props.phonetic.audio} controls crossOrigin style={{height:20, marginLeft:11}}/>
+          <ReactAudioPlayer src={props.phonetic.audio} controls style={{height:20, marginLeft:11}}/>
         </div>
       </div>
     </div>
