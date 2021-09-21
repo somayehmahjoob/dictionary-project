@@ -1,0 +1,23 @@
+
+.PhoneticComponent {
+
+}
+.word-phonetic {
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.word-phonetic-btn {
+  width: auto;
+  border: none;
+  background-color: transparent;  
+  margin-right: 10px;
+}
+.word-phonetic-btn img {
+  border: none;
+  width: 30px;  
+  margin-bottom: 0;
+}
+.word-phonetic span {
+  font-size: 20px;
+  font-weight: 400;
+}

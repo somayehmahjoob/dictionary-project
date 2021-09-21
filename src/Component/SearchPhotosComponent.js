@@ -2,7 +2,7 @@ import React from 'react';
 
 import "../assets/css/SearchPhotosComponent.css";
 
-export default function SearchPhotosComponent(props){
+export default function SearchPhotosComponent(props){ 
   if(props.photos){
     return (
       <div className="SearchPhotosComponent">
