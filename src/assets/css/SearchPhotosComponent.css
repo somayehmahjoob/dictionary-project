@@ -1,15 +1,17 @@
-.SearchPhotosComponent {
-  text-align: center;
-}
-.box-img {
-  max-width: 900px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.box>div img {
-  max-width: 280px;
+img {
   border-radius: 12px;
   margin-bottom: 15px;
 }
+
+.SearchPhotosComponent {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.box-img {
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px 10px;
+  box-shadow: 0px 4px 16px rgb(150 150 150 / 10%);
+}
+
